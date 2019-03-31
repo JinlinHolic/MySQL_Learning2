@@ -17,7 +17,15 @@ SELECT 要查询的列名 FROM 表名字 WHERE 限制条件; (注意：如果要
 
 
        SELECT name,age FROM employee;
-      
+       
+## 去重查询(distinct)
+
+在表中，可能会包含重复值。这并不成问题，不过，有时也许希望仅仅列出不同（distinct）的值。关键词 distinct用于返回唯一不同的值。
+
+### 1.作用于单列
+
+举例: 列表A和列表B 
+
 
 
 
