@@ -24,7 +24,13 @@ SELECT 要查询的列名 FROM 表名字 WHERE 限制条件; (注意：如果要
 
 ### 1.作用于单列
 
-举例: 列表A和列表B 
+举例: 列表A有两列 分别是id和name  
+
+
+        select distinct name from A
+        
+出来结果只是仅仅列出不同的id和与之匹配的唯一不重复name
+      
 
 
 
