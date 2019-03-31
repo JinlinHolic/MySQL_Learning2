@@ -11,6 +11,10 @@ SQL，指结构化查询语言，全称是 Structured Query Language;SQL 可以�
 MySQL是一种开放源代码的关系型数据库管理系统（RDBMS），使用最常用的数据库管理语言--结构化查询语言（SQL）进行数据库管理;MySQL是开放源代码的，因此任何人都可以在General Public License的许可下下载并根据个性化的需要对其进行修改。
 
 ## 查询语句 SELECT FROM 
-SELECT 要查询的列名 FROM 表名字 WHERE 限制条件;
+SELECT 要查询的列名 FROM 表名字 WHERE 限制条件; (注意：如果要查询表的所有内容，则把要查询的列名 用一个星号 * 号表示，代表要查询表中所有的列。大多数情况，只需要查看某个表的指定的列。
+
+举例: 从employee表中选择name、age列
+
+
 
 
