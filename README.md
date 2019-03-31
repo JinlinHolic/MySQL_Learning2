@@ -16,5 +16,9 @@ SELECT 要查询的列名 FROM 表名字 WHERE 限制条件; (注意：如果要
 举例: 从employee表中选择name、age列
 
 
+       SELECT name,age FROM employee;
+      
+
+
 
 
