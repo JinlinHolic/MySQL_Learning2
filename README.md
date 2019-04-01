@@ -236,7 +236,12 @@ mysql> SELECT 1+
 
 +----+---------+
 
-我在cmd里面进行建表 登入mysql之后 如下图: 
+我在cmd里面进行建表 登入mysql之后 建表之后加入数据id 和 Email  用USE 表名称 如下图: 
+
+![WeChat Image_20190401232317](https://user-images.githubusercontent.com/43989688/55360902-fd8aa580-54d5-11e9-8da4-7a1511ad7f9a.png)
+
+然后进行各自数据的加入 
+
 
 
 
