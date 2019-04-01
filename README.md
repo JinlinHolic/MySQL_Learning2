@@ -30,7 +30,29 @@ SELECT 要查询的列名 FROM 表名字 WHERE 限制条件; (注意：如果要
         select distinct name from A
         
 出来结果只是仅仅列出不同的id和与之匹配的唯一不重复name
-      
+
+###  前N个语句
+
+SELECT * FROM table LIMIT [offset,] rows | rows OFFSET offset
+LIMIT 子句可以被用于强制 SELECT 语句返回指定的记录数。LIMIT 接受一个或两个数字参数。参数必须是一个整数常量。
+如果给定两个参数，第一个参数指定第一个返回记录行的偏移量，第二个参数指定返回记录行的最大数目。
+初始记录行的偏移量是 0(而不是 1)： 为了与 PostgreSQL 兼容，MySQL 也支持句法： LIMIT # OFFSET #。
+mysql> SELECT * FROM table LIMIT 5,10; // 检索记录行 6-15 ,注意，10为偏移量 
+//为了检索从某一个偏移量到记录集的结束所有的记录行，可以指定第二个参数为 -1：
+mysql> SELECT * FROM table LIMIT 95,-1; // 检索记录行 96-last.
+//如果只给定一个参数，它表示返回最大的记录行数目：
+mysql> SELECT * FROM table LIMIT 5; //检索前 5 个记录行 //也就是说，LIMIT n 等价于 LIMIT 0,n。
+如果你想得到最后几条数据可以多加个 order by id desc
+
+mysql不支持select top n的语法，应该用这个替换：
+select * from tablename order by orderfield desc/asc limit position， counter；
+position 指示从哪里开始查询，如果是0则是从头开始，counter 表示查询的个数
+取前15条记录：
+select * from tablename order by orderfield desc/asc limit 0,15
+
+### CASE...END判断语句
+
+
 
 
 
