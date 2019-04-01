@@ -196,6 +196,47 @@ mysql> select period_add(9801,2);
 
 用来处理很多数值方面的运算，使用数值函数，可以免去很多繁杂的判断求值的过程，能够大大提高用户的工作效率。
 
+##  SQL注释
+
+//在mysql中如何写注释语句
+
+mysql> SELECT 1+1;     # 这个注释直到该行结束
+
+mysql> SELECT 1+1;     -- 这个注释直到该行结束
+
+mysql> SELECT 1  /* 这是一个在行中间的注释 */ + 1;
+
+mysql> SELECT 1+
+/*
+这是一个
+多行注释的形式
+*/
+1;
+
+## SQL代码规范
+参考文献: [SQL编程格式的优化建议] https://zhuanlan.zhihu.com/p/27466166  [SQL Style Guide] https://www.,dsqlstyle.guide/
+
+## 作业
+
+### 任务一 查找重复的电子邮箱（难度：简单）
+
+创建 email表，并插入如下三行数据
+
++----+---------+
+
+| Id | c   |
+
++----+---------+
+
+| 1  | a@b.com |
+
+| 2  | c@d.com |
+
+| 3  | a@b.com |
+
++----+---------+
+
+我在cmd里面进行建表 登入mysql之后 如下图: 
 
 
 
