@@ -88,29 +88,6 @@ https://blog.csdn.net/haibo0668/article/details/52539880
 (1) group by的含义:将查询结果按照1个或多个字段进行分组，字段值相同的为一组
 (2) group by可用于单个字段分组，也可用于多个字段分组
 
-select * from employee;
-+------+------+--------+------+------+-------------+
-| num  | d_id | name   | age  | sex  | homeaddr    |
-+------+------+--------+------+------+-------------+
-|    1 | 1001 | 张三   |   26 | 男   | beijinghdq  |
-|    2 | 1002 | 李四   |   24 | 女   | beijingcpq  |
-|    3 | 1003 | 王五   |   25 | 男   | changshaylq |
-|    4 | 1004 | Aric   |   15 | 男   | England     |
-+------+------+--------+------+------+-------------+
-
-select * from employee group by d_id,sex;
-
-select * from employee group by sex;
-+------+------+--------+------+------+------------+
-| num  | d_id | name   | age  | sex  | homeaddr   |
-+------+------+--------+------+------+------------+
-|    2 | 1002 | 李四   |   24 | 女   | beijingcpq |
-|    1 | 1001 | 张三   |   26 | 男   | beijinghdq |
-+------+------+--------+------+------+------------+
-根据sex字段来分组，sex字段的全部值只有两个('男'和'女')，所以分为了两组
-当group by单独使用时，只显示出每组的第一条记录
-所以group by单独使用时的实际意义不大
-
 参考链接:https://www.cnblogs.com/snsdzjlz320/p/5738226.html
 
 ###   HAVING子句
@@ -118,12 +95,108 @@ select * from employee group by sex;
 (1) having 条件表达式：用来分组查询后指定一些条件来输出查询结果
 (2) having作用和where一样，但having只能用于group by
 
-select sex,count(sex) from employee group by sex having count(sex)>2;
-+------+------------+
-| sex  | count(sex) |
-+------+------------+
-| 男   |          3 |
-+------+------------+
+参考链接:https://www.cnblogs.com/snsdzjlz320/p/5738226.html
+
+## 排序语句 ORDER BY 
+
+排序语句，语句执行顺序中一般最后执行该语句。
+
+升序：select * from table_name order by xx，yy;
+
+降序：select * from table_name order by xx desc，yy desc;
+
+##  函数
+
+MySQL 有很多内置的函数,以下列出了这些函数的说明。参考链接:
+
+http://www.runoob.com/mysql/mysql-functions.html
+
+###  时间函数
+dayofweek(date)    
+返回日期date是星期几(1=星期天,2=星期一,……7=星期六,odbc标准)  
+mysql> select dayofweek('1998-02-03');    
+　　-> 3    
+ 
+weekday(date)    
+返回日期date是星期几(0=星期一,1=星期二,……6= 星期天)。 
+  
+mysql> select weekday('1997-10-04 22:23:00');    
+　　-> 5    
+mysql> select weekday('1997-11-05');    
+　　-> 2    
+ 
+dayofmonth(date)    
+返回date是一月中的第几日(在1到31范围内)    
+mysql> select dayofmonth('1998-02-03');    
+　　-> 3    
+ 
+dayofyear(date)    
+返回date是一年中的第几日(在1到366范围内)    
+mysql> select dayofyear('1998-02-03');    
+　　-> 34    
+ 
+month(date)    
+返回date中的月份数值    
+mysql> select month('1998-02-03');    
+　　-> 2    
+ 
+dayname(date)    
+返回date是星期几(按英文名返回)  
+mysql> select dayname("1998-02-05");    
+　　-> 'thursday'    
+ 
+monthname(date)    
+返回date是几月(按英文名返回)  
+mysql> select monthname("1998-02-05");    
+　　-> 'february'    
+ 
+quarter(date)    
+返回date是一年的第几个季度    
+mysql> select quarter('98-04-01');    
+　　-> 2    
+ 
+week(date,first)   
+返回date是一年的第几周(first默认值0,first取值1表示周一是
+周的开始,0从周日开始)  
+mysql> select week('1998-02-20');    
+　　-> 7    
+mysql> select week('1998-02-20',0);    
+　　-> 7    
+mysql> select week('1998-02-20',1);    
+　　-> 8    
+ 
+year(date)    
+返回date的年份(范围在1000到9999)    
+mysql> select year('98-02-03');    
+　　-> 1998    
+ 
+hour(time)    
+返回time的小时数(范围是0到23)   
+mysql> select hour('10:05:03');    
+　　-> 10    
+ 
+minute(time)    
+返回time的分钟数(范围是0到59)    
+mysql> select minute('98-02-03 10:05:03');    
+　　-> 5    
+ 
+second(time)    
+返回time的秒数(范围是0到59)   
+mysql> select second('10:05:03');    
+　　-> 3    
+ 
+period_add(p,n)    
+增加n个月到时期p并返回(p的格式yymm或yyyymm)    
+mysql> select period_add(9801,2);    
+　　-> 199803    
+  
+参考链接:https://www.cnblogs.com/xuyulin/p/5468102.html
+
+### 数值函数
+
+用来处理很多数值方面的运算，使用数值函数，可以免去很多繁杂的判断求值的过程，能够大大提高用户的工作效率。
+
+
 
 
 
