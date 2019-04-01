@@ -2,7 +2,10 @@
 
 ##  导入示例数据库 
 
-根据大大给的教程链接 完成了一次数据库导入 也就是导入到现有的mySQL之中 教程链接再贴一下: https://www.yiibai.com/mysql/how-to-load-sample-database-into-mysql-database-server.html 
+根据大大给的教程链接 完成了一次数据库导入 也就是导入到现有的mySQL之中 教程链接再贴一下: https://www.yiibai.com/mysql/how-to-load-sample-database-into-mysql-database-server.html 导入结果如下图所示。
+
+![WeChat Image_20190401204512](https://user-images.githubusercontent.com/43989688/55352505-4a17b600-54c1-11e9-97c4-26d7c61918c9.png)
+
 
 
       
