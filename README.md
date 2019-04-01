@@ -2,7 +2,10 @@
 
 ##  导入示例数据库 
 
-根据大大给的教程链接 完成了一次数据库导入 也就是导入到现有的mySQL之中 教程链接再贴一下: https://www.yiibai.com/mysql/how-to-load-sample-database-into-mysql-database-server.html
+根据大大给的教程链接 完成了一次数据库导入 也就是导入到现有的mySQL之中 教程链接再贴一下: https://www.yiibai.com/mysql/how-to-load-sample-database-into-mysql-database-server.html 
+
+
+      
 
 ## 最纠结的来了  SQL是什么？MySQL是什么？  
 
