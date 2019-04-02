@@ -244,6 +244,9 @@ mysql> SELECT 1+
 
 ![WeChat Image_20190402060018](https://user-images.githubusercontent.com/43989688/55375590-09458e80-550d-11e9-8b6c-87f77e9d4575.png)
 
+### 编写一个 SQL 查询，查找 Email 表中所有重复的电子邮箱。根据以上输入，你的查询应返回以下结果：
+
+
 
 
 
