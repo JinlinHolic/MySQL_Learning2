@@ -240,7 +240,8 @@ mysql> SELECT 1+
 
 ![WeChat Image_20190401232317](https://user-images.githubusercontent.com/43989688/55360902-fd8aa580-54d5-11e9-8da4-7a1511ad7f9a.png)
 
-然后进行各自数据的加入 
+然后进行各自数据的加入 再USE EMAIL 然后SELECT* FROM email查看是否存在表 如下图:
+
 
 
 
