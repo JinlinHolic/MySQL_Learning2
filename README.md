@@ -242,6 +242,9 @@ mysql> SELECT 1+
 
 然后进行各自数据的加入 再USE EMAIL 然后SELECT* FROM email查看是否存在表 如下图:
 
+![WeChat Image_20190402060018](https://user-images.githubusercontent.com/43989688/55375590-09458e80-550d-11e9-8b6c-87f77e9d4575.png)
+
+
 
 
 
