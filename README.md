@@ -284,7 +284,10 @@ mysql> SELECT 1+
 
 cmd建表如图
 
+![WeChat Image_20190402061839](https://user-images.githubusercontent.com/43989688/55376126-33984b80-550f-11e9-8101-9085ae21d7c9.png)
 
+
+再插入数据
 
 
 
